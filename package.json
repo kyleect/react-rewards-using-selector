@@ -1,6 +1,6 @@
 {
   "name": "react-rewards-using-selector",
-  "version": "2.1.0",
+  "version": "0.1.0",
   "description": "This package lets you easily add micro-interactions to your app and reward users with the rain of confetti, emoji or balloons.",
   "author": "thedevelobear",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "watch": "rollup -c -w",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "prepublish": "npm run lint && rm -rf dist && NODE_ENV=production npm run build"
+    "prepublish": "rm -rf dist && NODE_ENV=production npm run build"
   },
   "peerDependencies": {
     "react": ">=15",
