@@ -3,9 +3,8 @@ import { confetti } from '../components/Confetti/Confetti';
 import { emoji } from '../components/Emoji/Emoji';
 import { balloons } from '../components/Balloons/Balloons';
 import { UseRewardType } from './useReward.types';
-import { getContainerById } from '../functions/helpers';
 
-export const useReward: UseRewardType = (id, type, config) => {
+export const useReward: UseRewardType = (selector, type, config) => {
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
   const internalAnimatingCallback = () => {
@@ -13,7 +12,7 @@ export const useReward: UseRewardType = (id, type, config) => {
   };
 
   const reward = useCallback(() => {
-    const foundContainer = getContainerById(id);
+    const foundContainer = document.querySelector(selector);
     if (!foundContainer) return;
     setIsAnimating(true);
     switch (type) {
@@ -29,7 +28,7 @@ export const useReward: UseRewardType = (id, type, config) => {
       default:
         console.error(`${type} is not a valid react-rewards type.`);
     }
-  }, [config, id, type]);
+  }, [config, selector, type]);
 
   return { reward, isAnimating };
 };

@@ -16,7 +16,7 @@ export type RewardFunction = {
 };
 
 export type UseRewardType = <T extends RewardType>(
-  id: string,
+  selector: string,
   type: T,
   config?: RewardConfigs[T]
 ) => RewardFunction;

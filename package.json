@@ -29,7 +29,7 @@
     "watch": "rollup -c -w",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "prepublish": "yarn lint && rm -rf dist && NODE_ENV=production yarn build"
+    "prepublish": "npm run lint && rm -rf dist && NODE_ENV=production npm run build"
   },
   "peerDependencies": {
     "react": ">=15",

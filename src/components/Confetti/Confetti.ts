@@ -1,12 +1,12 @@
-import { ConfettiConfig } from './Confetti.types';
+import { ConfettiConfig } from "./Confetti.types";
 import {
   animate,
   generatePhysics,
   getRandomInt,
-} from '../../functions/helpers';
-import { Particle } from '../../Main.types';
+} from "../../functions/helpers";
+import { Particle } from "../../Main.types";
 
-const defaultColors = ['#A45BF1', '#25C6F6', '#72F753', '#F76C88', '#F5F770'];
+const defaultColors = ["#A45BF1", "#25C6F6", "#72F753", "#F76C88", "#F5F770"];
 const factors = [-0.6, -0.3, 0, 0.3, 0.6];
 
 const createElements = (
@@ -18,8 +18,8 @@ const createElements = (
   colors: string[]
 ) =>
   Array.from({ length: elementCount }).map((_, index) => {
-    const element = document.createElement('span');
-    element.style['background-color'] = colors[index % colors.length];
+    const element: HTMLSpanElement = document.createElement("span");
+    element.style.backgroundColor = colors[index % colors.length];
     element.style.width = `${elementSize}px`;
     element.style.height = `${elementSize}px`;
     element.style.position = position;
@@ -85,7 +85,7 @@ export const confetti = (
     lifetime = 200,
     startVelocity = 35,
     zIndex = 0,
-    position = 'fixed',
+    position = "fixed",
     fps = 60,
     onAnimationComplete,
   } = options;
@@ -103,7 +103,7 @@ export const confetti = (
   }));
 
   const onFinish = () => {
-    if (typeof onAnimationComplete === 'function') {
+    if (typeof onAnimationComplete === "function") {
       onAnimationComplete();
     }
     internalAnimatingCallback();
