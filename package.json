@@ -1,16 +1,16 @@
 {
-  "name": "react-rewards",
+  "name": "react-rewards-using-selector",
   "version": "2.1.0",
   "description": "This package lets you easily add micro-interactions to your app and reward users with the rain of confetti, emoji or balloons.",
   "author": "thedevelobear",
   "license": "MIT",
-  "main": "dist/react-rewards.js",
-  "jsnext:main": "dist/react-rewards.es.js",
-  "module": "dist/react-rewards.es.js",
-  "types": "dist/react-rewards.d.ts",
-  "homepage": "https://github.com/thedevelobear/react-rewards",
+  "main": "dist/react-rewards-using-selector.js",
+  "jsnext:main": "dist/react-rewards-using-selector.es.js",
+  "module": "dist/react-rewards-using-selector.es.js",
+  "types": "dist/react-rewards-using-selector.d.ts",
+  "homepage": "https://github.com/kyleect/react-rewards-using-selector",
   "repository": {
-    "url": "git+https://github.com/thedevelobear/react-rewards.git"
+    "url": "git+https://github.com/kyleect/react-rewards-using-selector.git"
   },
   "keywords": [
     "react",

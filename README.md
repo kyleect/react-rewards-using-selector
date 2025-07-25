@@ -1,14 +1,6 @@
-![react-rewards logo](assets/react-rewards.png?raw=true "react-rewards")
+# react-rewards-using-selector
 
-:evergreen_tree: **Tree-shakeable**
-:female_detective: **Built with TypeScript**
-:package: **3.6kB gzipped**
-
-This package was inspired by react-dom-confetti.
-
-**React-rewards** lets you add micro-interactions to your app, and rewards users with the rain of confetti, emoji or balloons in seconds.
-Firing confetti all over the page may seem like a questionable idea, but keep in mind that rewarding users for their actions is not.
-If a huge cloud of smiling emoji doesn't fit your application well, try changing the physics config to make it more subtle.
+This is a fork of [react-rewards](https://github.com/thedevelobear/react-rewards) that allows you to define any CSS selector instead of just an element id.
 
 #### Confetti
 
@@ -45,7 +37,7 @@ Animation particles are set to position: 'fixed' by default, but this can be cha
 #### Single reward
 
 ```js
-import { useReward } from 'react-rewards';
+import { useReward } from 'react-rewards-using-selector';
 ...
 const { reward, isAnimating } = useReward('#rewardId', 'confetti');
 ...
@@ -63,7 +55,7 @@ const { reward, isAnimating } = useReward('#rewardId', 'confetti');
 **TIP:** You can use the same ID to shoot from the same spot, or provide separate elements with unique IDs.
 
 ```js
-import { useReward } from 'react-rewards';
+import { useReward } from 'react-rewards-using-selector';
 ...
 const {reward: confettiReward, isAnimating: isConfettiAnimating} = useReward('#confettiReward', 'confetti');
 const {reward: balloonsReward, isAnimating: isBalloonsAnimating} = useReward('.balloonsReward', 'balloons');
